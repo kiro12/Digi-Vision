@@ -29,22 +29,18 @@ export class AdminComponent {
     this.productService.getAllProducts().subscribe((products: any[]) => {
       this.dataSource.data = products;
       this.isLoading = false
-      console.log(this.dataSource)
     });
   }
   ngAfterViewInit() {
-    console.log(this.paginator)
-
     this.dataSource.paginator = this.paginator;
-    console.log(this.dataSource.paginator)
   }
-  editProduct(id:any) {
 
-  }
   deleteProduct(id:any ) {
     this.productService.deleteProduct(id).subscribe((res: any) => {
       this.dataSource.data = this.dataSource.data.filter((product: any) => product.id !== id);
       this._snackBar.open('Products is deleted successfully', 'Success', {panelClass: 'success-snackbar' , duration: 2000})
+    },error => {
+      this._snackBar.open(error.error.message , 'Error', { duration: 2000} )
     })
   }
 }

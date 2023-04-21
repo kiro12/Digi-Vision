@@ -26,7 +26,6 @@ export class ProductMasterComponent {
 
   ngOnInit(): void {
     this.route.params.subscribe((param:any) => {
-      console.log(param)
       if(param.id) {
         this.loading = true
         this.id = param.id
@@ -64,7 +63,6 @@ export class ProductMasterComponent {
 
   }
   onChange(event:any) {
-    console.log(event)
     this.file = event.target.files[0];
 
   }
