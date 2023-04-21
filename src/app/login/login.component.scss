@@ -1,0 +1,54 @@
+
+  .login {
+    form {
+      display: flex;
+      flex-direction: column;
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+
+        label {
+          margin-bottom: 0.5rem;
+          font-weight: bold;
+        }
+
+        input {
+          padding: 0.5rem;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+          font-size: 1rem;
+          width: 100%;
+        }
+
+        input:focus {
+          outline: none;
+          border-color: #0066cc;
+        }
+      }
+
+      button[type="submit"] {
+        padding: 0.5rem;
+        background-color: #0066cc;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #0052a3;
+        }
+      }
+    }
+    form{
+      background: #b3bec9;
+      padding: 20px;
+      border-radius: 8px;
+      width: 80%;
+      max-width: 450px;
+    }
+  }
+
